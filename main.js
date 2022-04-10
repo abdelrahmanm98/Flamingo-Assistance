@@ -85,6 +85,7 @@ $(".sidebar .close-aside").addEventListener("click", function () {
 const tabs = document.querySelectorAll(".operations__tab");
 const tabsContainer = document.querySelector(".operations__tab-container");
 const tabsContent = document.querySelectorAll(".operations__content");
+const formatingStyle = document.querySelector(".formating-Style");
 const realTime = document.querySelector(".Time-Now");
 
 tabsContent.forEach((c) => (c.style.display = "none"));
@@ -131,9 +132,16 @@ let displayHide = "none";
 
 document.querySelector(".click-js").addEventListener("click", function (e) {
   e.preventDefault();
-  document.querySelector(".formating-Style").style.display = changeGrid;
-  document.querySelector(".formating-Style").style.gridTemplateColumns =
-    "620px 620px 620px";
+
+  // document.querySelector(".formating-Style").style.display = changeGrid;
+  // document.querySelector(".formating-Style").style.gridTemplateColumns = "620px 620px 620px";
+  const FormatFile = document.querySelectorAll(".formating-Style");
+  FormatFile.forEach(function (_, i) {
+    FormatFile[i].style.display = changeGrid;
+    FormatFile[i].style.gridTemplateColumns = "620px 620px 620px";
+    console.log(i);
+  });
+
   const nodeListed = document.querySelectorAll(".Formating-File");
   nodeListed.forEach(function (_, i) {
     nodeListed[i].style.marginRight = oneTwoPre;

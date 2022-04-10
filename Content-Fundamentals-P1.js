@@ -168,7 +168,7 @@ margin-bottom: 5;
 // Section TWo 2️⃣ value And var
 
 const FundamentalsP1_2 = `<section class="charts mt-4">
-<div class="chart-container p-3 formating-Style " style="padding: 0.3rem !important">
+<div class="chart-container p-3 " style="padding: 0.3rem !important">
 
   <div class="divttyprint">
   <h3 class="Description-H3">The Difference Between ( Var ) ( Let ) ( Const ) 
