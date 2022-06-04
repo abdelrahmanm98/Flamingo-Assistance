@@ -87,12 +87,9 @@ const tabsContainer = document.querySelector(".operations__tab-container");
 const tabsContent = document.querySelectorAll(".operations__content");
 const formatingStyle = document.querySelector(".formating-Style");
 const realTime = document.querySelector(".Time-Now");
+const background = document.getElementById("background-img-js");
 
 tabsContent.forEach((c) => (c.style.display = "none"));
-
-// bad practice
-
-// tabs.forEach(t => t.addEventListener('click', () => console.log(t)));
 
 tabsContainer.addEventListener("click", function (e) {
   const clicked = e.target.closest(".operations__tab");
@@ -101,8 +98,9 @@ tabsContainer.addEventListener("click", function (e) {
   //Real Time Style
   realTime.style.fontSize = "20px";
   realTime.style.textAlign = "right";
-  realTime.style.color = "#0d6efd";
+  realTime.style.color = "#fff";
   realTime.style.margin = "0 6px 0 0";
+  background.classList.remove("background-img");
 
   //Real Time Style
 
@@ -180,10 +178,11 @@ document.querySelector(".click-js").addEventListener("click", function (e) {
 document.querySelector(".home-Page").addEventListener("click", function () {
   tabsContent.forEach((c) => (c.style.display = "none"));
   //Real Time Style
-  realTime.style.fontSize = "100px";
-  realTime.style.textAlign = "center";
+  realTime.style.fontSize = "20px";
+  realTime.style.textAlign = "right";
   realTime.style.color = "#fff";
-  realTime.style.margin = "125px 0px 0 0";
+  realTime.style.margin = "0px 6px 0 0";
+  background.classList.add("background-img");
 });
 
 // Create Time Live
